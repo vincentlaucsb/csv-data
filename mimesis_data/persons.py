@@ -6,7 +6,7 @@ import random
 
 person = mimesis.Personal(locale='en')
 
-with open('persons.csv', mode='w', newline='\r\n') as person_file:
+with open('persons.csv', mode='w', newline='\n', encoding='utf-8') as person_file:
     writer = csv.writer(person_file)
     
     # Header Row
