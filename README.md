@@ -16,7 +16,7 @@ existing project.
 git submodule add https://github.com/vincentlaucsb/csv-data.git tests/data
 ```
 
-** Cloning **
+#### Cloning
 By default, a `git pull` or `git clone` won't include the submodule contents. To include them, see:
 https://stackoverflow.com/questions/8090761/pull-using-git-including-submodule
 
