@@ -1,0 +1,9 @@
+[submodule "real_data/List-of-US-States"]
+	path = real_data/List-of-US-States
+	url = https://github.com/jasonong/List-of-US-States.git
+[submodule "real_data/us-states"]
+	path = real_data/us-states
+	url = https://github.com/jasonong/List-of-US-States.git
+[submodule "real_data/us_states"]
+	path = real_data/us_states
+	url = https://github.com/jasonong/List-of-US-States.git
