@@ -4,27 +4,29 @@ import mimesis
 import csv
 import random
 
-person = mimesis.Personal(locale='en')
+person = mimesis.Person(locale='en')
+genderEnum = mimesis.enums.Gender
 
 with open('persons.csv', mode='w', newline='\n', encoding='utf-8') as person_file:
     writer = csv.writer(person_file)
     
     # Header Row
-    writer.writerow(['Full Name', 'Age', 'Occupation', 'Email', 'Telephone',
+    writer.writerow(['Id', 'Full Name', 'Age', 'Occupation', 'Email', 'Telephone',
         'Nationality'])
     
     for i in range(0, 50000):
         rando = random.uniform(0, 1)
         if rando >= 0.5:
-            gender = 'female'
+            gender = genderEnum.FEMALE
         else:
-            gender = 'male'
+            gender = genderEnum.MALE
                 
         row = [
+            i,
             person.full_name(gender=gender),
             person.age(),
             person.occupation(),
-            person.email(gender=gender),
+            person.email(),
             person.telephone(),
             person.nationality()
         ]
